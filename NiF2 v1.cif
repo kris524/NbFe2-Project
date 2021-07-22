@@ -1,0 +1,135 @@
+#Created by the Bilbao Crystallographic Server
+# http://www.cryst.ehu.es
+# Date: 06/08/2018 10:51:35
+# Database entry: 0.36 NiF2
+# Cif-like file for the case 0.36
+
+
+data_5yOhtAoR
+_audit_creation_date            2018-06-08
+_audit_creation_method          "Bilbao Crystallographic Server"
+
+_chemical_name_systematic
+;
+;
+_chemical_name_common                    ?
+_chemical_formula_moiety                 ?
+_chemical_formula_structural             ?
+_chemical_formula_analytical             ?
+_chemical_formula_iupac                  ?
+_chemical_formula_sum                    'Ni F2'
+_chemical_formula_weight                 ?
+_chemical_melting_point                  ?
+_chemical_compound_source                ?
+_chemical_absolute_configuration         .
+
+
+_citation_journal_abbrev        "J. Phys. C: Solid State Phys."
+_citation_journal_volume        14
+_citation_page_first            5171
+_citation_page_last             5184
+_citation_article_id            .
+_citation_year                  1981
+_citation_DOI                   ?
+
+loop_
+_citation_author_name
+Brown, P.J.
+
+_atomic_positions_source_database_code_ICSD  .
+_atomic_positions_source_other               "."
+
+_transition_temperature     73
+_experiment_temperature     ?
+
+loop_
+_irrep_id
+_irrep_dimension
+_irrep_small_dimension
+_irrep_direction_type
+_irrep_action
+_irrep_modes_number
+_irrep_presence
+mGM5 2 2 special primary . .
+
+_exptl_crystal_magnetic_properties_details
+;
+PNPD
+my = weak ferromagnetic component
+value of weak F component from macroscopic measurements
+very small orthorhombic strain of the unit cell detected in other studies. A Pnnm structural model consistent with the
+magnetic symmetry has been reported (icsd 73728)
+;
+
+_active_magnetic_irreps_details
+;
+1k magnetic structure
+k-maximal magnetic symmetry
+;
+
+_parent_space_group.name_H-M                        'P 4_2/m n m'
+_parent_space_group.IT_number                       136
+_parent_space_group.transform_to_standard_Pp_abc    'a,b,c;0,0,0'
+
+loop_
+_magnetic_propagation_vector_seq_id
+_magnetic_propagation_vector_kxkykz
+k1 0,0,0
+
+_magnetic_space_group.standard_setting              'no'
+_magnetic_space_group.transform_from_parent_Pp_abc  'a,b,c;0,0,0'
+_magnetic_space_group.transform_to_standard_Pp_abc  'b,-a,c;0,0,0'
+
+loop_
+_magnetic_atom_site_moment_symmetry_constraints_label
+_atom_site_magnetic_moment_symmetry_constraints_mxmymz
+Ni mx,my,0
+
+_space_group.magn_number_BNS   58.398
+_space_group.magn_name_BNS     "P n n' m' "
+_space_group.magn_point_group "m'm'm"
+_space_group.magn_point_group_number "8.4.27"
+_cell_length_a                 4.71000
+_cell_length_b                 4.71000
+_cell_length_c                 3.11800
+_cell_angle_alpha              90.00
+_cell_angle_beta               90.00
+_cell_angle_gamma              90.00
+
+loop_
+_space_group_symop.magn_id 
+_space_group_symop.magn_operation_xyz
+_space_group_symop.magn_operation_mxmymz
+1 x,y,z,+1 mx,my,mz
+2 -x+1/2,y+1/2,-z+1/2,+1 -mx,my,-mz
+3 -x,-y,-z,+1 mx,my,mz
+4 x+1/2,-y+1/2,z+1/2,+1 -mx,my,-mz
+5 x+1/2,-y+1/2,-z+1/2,-1 -mx,my,mz
+6 -x,-y,z,-1 mx,my,-mz
+7 -x+1/2,y+1/2,z+1/2,-1 -mx,my,mz
+8 x,y,-z,-1 mx,my,-mz
+
+loop_
+_space_group_symop.magn_centering_id
+_space_group_symop.magn_centering_xyz
+_space_group_symop.magn_centering_mxmymz
+1 x,y,z,+1 mx,my,mz
+
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+Ni Ni 0.00000 0.00000 0.00000 1
+F F 0.30330 0.30330 0.00000 1
+
+loop_
+_atom_site_moment_label
+_atom_site_moment_crystalaxis_x
+_atom_site_moment_crystalaxis_y
+_atom_site_moment_crystalaxis_z
+Ni -2. 0.03 0.0
+
+

@@ -1,0 +1,41 @@
+# Created by the Bilbao Crystallographic Server
+# http://www.cryst.ehu.es
+# Date: 22/07/2021 12:17:26
+
+# NiF2.cif -- non-magnetic
+
+data_ZQIy4McH
+_audit_creation_date               2021-07-22
+_audit_creation_method             "Bilbao Crystallographic Server"
+_symmetry_Int_Tables_number        58
+#_symmetry_space_group_name_H-M    "Pnnm1'"
+_cell_length_a                     4.71000
+_cell_length_b                     4.71000
+_cell_length_c                     3.11800
+_cell_angle_alpha                  90.00000
+_cell_angle_beta                   90.00000
+_cell_angle_gamma                  90.00000
+
+loop_
+_symmetry_equiv_pos_site_id
+_symmetry_equiv_pos_as_xyz
+   1   x,y,z
+   2   -x+1/2,y+1/2,-z+1/2
+   3   -x,-y,-z
+   4   x+1/2,-y+1/2,z+1/2
+   5   x+1/2,-y+1/2,-z+1/2
+   6   -x,-y,z
+   7   -x+1/2,y+1/2,z+1/2
+   8   x,y,-z
+
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+Ni Ni 0.00000 0.00000 0.00000 1.0000
+F F 0.30330 0.30330 0.00000 1.0000
+
+
