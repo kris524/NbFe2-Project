@@ -1,17 +1,14 @@
 import gemmi
-
+#Work with two pakages, gemmi reads the magnetic coordsm while crystals reads the real coords
 import math,cmath
 import numpy as np
-import matplotlib.pyplot as plt
-
+import matplotlib.pyplot as plt 
 import crystals
 from crystals import Crystal
-#print(gemmi.Element('Mg').weight)
-from gemmi import cif
 
-#Read the cif file and save it in a block
+from gemmi import cif
+#Read the cif file and save it in a block, standard procedure when working with this package
 doc = cif.read_file('NiF2_mp-559798_primitive.cif')
-print(doc)
 block = doc.sole_block()
 
 
@@ -20,11 +17,11 @@ block = doc.sole_block()
 print('----------------------------------------------------------------------------------------------')
 
 import pandas as pd
-
+#create an empty list that will store all the data in this form: ['Ni', m1, m2, m3, 'F', m1, m2 m3]
 data = []
 for row in block.find_mmcif_category('_atom_site_moment.'):
     row = list(row)
-    print(row)
+    #print(row)
     for value in row:
         try:
             data.append(float(value))
@@ -32,44 +29,101 @@ for row in block.find_mmcif_category('_atom_site_moment.'):
             data.append(value)
     
 
+
 print(data)
+#now data = ['Ni', -2.0, 0.03, 0.0, 'F', 0.0, 0.0, 0.0], however, we need to divide it into grops,
+# Thats what the next line of code does, it splits them accordingly
+#OBJECTIVE: ATTACHE THE NUMBERS TO THE DATA STRING SO WE GET ['Ni',-2.000,ETC.]
+
 final_data = []
 i = 0
 while i < len(data):
     final_data.append(data[i:i+4])
     i+=4
 
-print(final_data) 
+print(final_data)  #[['Ni', -2.0, 0.03, 0.0], ['F', 0.0, 0.0, 0.0]]
 
-data = np.array(data)
-#OBJECTIVE: ATTACHE THE NUMBERS TO THE DATA STRING SO WE GET ['Ni',-2.000,ETC.]
-
-#df1 = pd.DataFrame(data, columns=['Element','m1','m2','m3'])
-#df1 = df1.set_index('Element')
-
-#print(df1)
-
+#Here we just create a pandas dataframe, the code is standard and makes everything easy to acces later on
+#name the corresponding columns and also, make element to be the index
+df1 = pd.DataFrame(final_data, columns=['Element','m1','m2','m3'])
+df1 = df1.set_index('Element')
+print(df1)
+# Part 1 done
 #=======================================================================================================================================
 
 print('----------------------------------------------------------------------------------------------')
-
+#Here we now use the crystals package to import the real coords of the crystal
 NiF2 = Crystal.from_cif(r'C:\Users\krist\Documents\PYTHON PROJECTS ON VS CODE\NiF2_mp-559798_primitive.cif') 
 
-#print(NiF2)
-
+#We convert all the data into an editable array, however, here we get the atomic numbers, not the element names so we will change that
 NiF2_array = np.array(NiF2)
-
 #print(NiF2_array)
+#make it into and array that will make access and edits easier
 df2 = pd.DataFrame(NiF2_array,columns=['Element','x','y','z'])
 df2 =df2.set_index('Element')
-
 #print(df2)
 
 print('----------------------------------------------------------------------------------------------')
 #Multiplication
 
+#=======================================================================================================================================
+#HERE I WILL TAKE THE CORRESPONDING ATOMIC NUMBERS WITH THEIR ELEMENTS:
+#mainly work with crystals package here to take the coordinates with their atomic number and just change 9 -> 'F', 28 -> 'Ni', etc
+#here we work with atomic data and df2
 
-#print(df1.index)
-#print(data[0][1:])
-#df2.multiply(np.array(data[0][1:]), axis='columns')
-#Try and use gemmi to extract that data
+atomic_data = pd.read_csv(r'C:\Users\krist\Documents\PYTHON PROJECTS ON VS CODE\Physics Project\atomic data.csv')
+atomic_data =atomic_data.set_index('Element')
+
+#print(atomic_data)
+
+#atomic_data.sort_index().sort_index(axis=1)
+#df2.sort_index().sort_index(axis=1)
+#Now we want to take df2 and compare its index to atomic data
+
+#Create this empty list that will contain all the symbols and later we will set this as an index for df2
+symbols_for_df2 = []
+for index, row in atomic_data.iterrows():
+    #print(index)
+    for index2, rows in df2.iterrows():
+        #print(j[0])
+        if index == index2:
+            
+            #create a new column that contains the symbol
+            symbols_for_df2.append(row['symbol'])
+            
+#Print to see all the coresponding symbols and finally atach them to the dataframe and make them an index, exacly as planned!      
+#print(symbols_for_df2)
+df2['symbols'] = symbols_for_df2 
+
+#print(df2)
+df2 = df2.set_index('symbols')
+
+#print(df2)
+
+#=======================================================================================================================================
+#Create an empty list where all the dot products will be stored there
+dot_product_list = []
+
+#iterate over the index and the rows, you have individual access to each of them
+for index2, row2 in df2.iterrows():
+
+    corrds_df2 = [row2['x'], row2['y'],row2['z']]
+
+    for index, row1 in df1.iterrows():
+
+        corrds_df1 = [row1['m1'], row1['m2'],row1['m3']]
+
+        if index2 == index:
+            dot_product = np.dot(corrds_df2, corrds_df1)
+            dot_product_list.append(dot_product)
+
+    
+    #name a corrds variable that keeps each coordinate as a list
+    
+
+    
+print('----------------------------------------------------------------------------------------------')
+
+print('The dot products are: ',dot_product_list)
+#[0.0, 0.0, 0.0, 0.0, 0.0, -0.985]
+
