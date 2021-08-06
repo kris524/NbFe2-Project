@@ -1,0 +1,119 @@
+Element,symbol,name,weight,notes
+1.0,H,Hydrogen,1.008,"3, 5"
+2.0,He,Helium,4.002 602(2),"1, 2"
+3.0,Li,Lithium,6.94,"3, 5"
+4.0,Be,Beryllium,9.012 1831(5),
+5.0,B,Boron,10.81,"3, 5"
+6.0,C,Carbon,12.011,5
+7.0,N,Nitrogen,14.007,5
+8.0,O,Oxygen,15.999,5
+9.0,F,Fluorine,18.998 403 163(6),
+10.0,Ne,Neon,20.1797(6),"1, 3"
+11.0,Na,Sodium,22.989 769 28(2)    ,
+12.0,Mg,Magnesium,24.305,5
+13.0,Al,Aluminium,26.981 5384(3),
+14.0,Si,Silicon,28.085,5
+15.0,P,Phosphorus,30.973 761 998(5),
+16.0,S,Sulfur,32.06,5
+17.0,Cl,Chlorine,35.45,"3, 5"
+18.0,Ar,Argon,39.948(1),"1, 2, 5"
+19.0,K,Potassium,39.0983(1),
+20.0,Ca,Calcium,40.078(4),
+21.0,Sc,Scandium,44.955 908(5),
+22.0,Ti,Titanium,47.867(1),
+23.0,V,Vanadium,50.9415(1),
+24.0,Cr,Chromium,51.9961(6),
+25.0,Mn,Manganese,54.938 043(2),
+26.0,Fe,Iron,55.845(2),
+27.0,Co,Cobalt,58.933 194(3),
+28.0,Ni,Nickel,58.6934(4),2
+29.0,Cu,Copper,63.546(3),2
+30.0,Zn,Zinc,65.38(2),2
+31.0,Ga,Gallium,69.723(1),
+32.0,Ge,Germanium,72.630(8),
+33.0,As,Arsenic,74.921 595(6),
+34.0,Se,Selenium,78.971(8),
+35.0,Br,Bromine,79.904,5
+36.0,Kr,Krypton,83.798(2),"1, 3"
+37.0,Rb,Rubidium,85.4678(3),1
+38.0,Sr,Strontium,87.62(1),"1, 2"
+39.0,Y,Yttrium,88.905 84(1),
+40.0,Zr,Zirconium,91.224(2),1
+41.0,Nb,Niobium,92.906 37(1),
+42.0,Mo,Molybdenum,95.95(1),1
+43.0,Tc,Technetium,[97],4
+44.0,Ru,Ruthenium,101.07(2),1
+45.0,Rh,Rhodium,102.905 49(2),
+46.0,Pd,Palladium,106.42(1),1
+47.0,Ag,Silver,107.8682(2),1
+48.0,Cd,Cadmium,112.414(4),1
+49.0,In,Indium,114.818(1),
+50.0,Sn,Tin,118.710(7),1
+51.0,Sb,Antimony,121.760(1),1
+52.0,Te,Tellurium,127.60(3),1
+53.0,I,Iodine,126.904 47(3),
+54.0,Xe,Xenon,131.293(6),"1, 3"
+55.0,Cs,Caesium,132.905 451 96(6),
+56.0,Ba,Barium,137.327(7),
+57.0,La,Lanthanum,138.905 47(7),1
+58.0,Ce,Cerium,140.116(1),1
+59.0,Pr,Praseodymium    ,140.907 66(1),
+60.0,Nd,Neodymium,144.242(3),1
+61.0,Pm,Promethium,[145],
+62.0,Sm,Samarium,150.36(2),1
+63.0,Eu,Europium,151.964(1),1
+64.0,Gd,Gadolinium,157.25(3),1
+65.0,Tb,Terbium,158.925 354(8),
+66.0,Dy,Dysprosium,162.500(1),1
+67.0,Ho,Holmium,164.930 328(7),
+68.0,Er,Erbium,167.259(3),1
+69.0,Tm,Thulium,168.934 218(6),
+70.0,Yb,Ytterbium,173.045(10),1
+71.0,Lu,Lutetium,174.9668(1),1
+72.0,Hf,Hafnium,178.486(6),
+73.0,Ta,Tantalum,180.947 88(2),
+74.0,W,Tungsten,183.84(1),
+75.0,Re,Rhenium,186.207(1),
+76.0,Os,Osmium,190.23(3),1
+77.0,Ir,Iridium,192.217(2),
+78.0,Pt,Platinum,195.084(9),
+79.0,Au,Gold,196.966 570(4),
+80.0,Hg,Mercury,200.592(3),
+81.0,Tl,Thallium,204.38,5
+82.0,Pb,Lead,207.2(1),"1, 2, 5"
+83.0,Bi,Bismuth,208.980 40(1),
+84.0,Po,Polonium,[209],4
+85.0,At,Astatine,[210],4
+86.0,Rn,Radon,[222],4
+87.0,Fr,Francium,[223],4
+88.0,Ra,Radium,[226],4
+89.0,Ac,Actinium,[227],4
+90.0,Th,Thorium,232.0377(4),"1, 4"
+91.0,Pa,Protactinium,231.035 88(1),4
+92.0,U,Uranium,238.028 91(3),"1, 3, 4"
+93.0,Np,Neptunium,[237],4
+94.0,Pu,Plutonium,[244],4
+95.0,Am,Americium,[243],4
+96.0,Cm,Curium,[247],4
+97.0,Bk,Berkelium,[247],4
+98.0,Cf,Californium,[251],4
+99.0,Es,Einsteinium,[252],4
+100.0,Fm,Fermium,[257],4
+101.0,Md,Mendelevium,[258],4
+102.0,No,Nobelium,[259],4
+103.0,Lr,Lawrencium,[262],4
+104.0,Rf,Rutherfordium,[267],4
+105.0,Db,Dubnium,[270],4
+106.0,Sg,Seaborgium,[269],4
+107.0,Bh,Bohrium,[270],4
+108.0,Hs,Hassium,[270],4
+109.0,Mt,Meitnerium,[278],4
+110.0,Ds,Darmstadtium,[281],4
+111.0,Rg,Roentgenium,[281],4
+112.0,Cn,Copernicium,[285],4
+113.0,Nh,Nihonium,[286],4
+114.0,Fl,Flerovium,[289],4
+115.0,Mc,Moscovium,[289],4
+116.0,Lv,Livermorium,[293],4
+117.0,Ts,Tennessine,[293],4
+118.0,Og,Oganesson,[294],4
